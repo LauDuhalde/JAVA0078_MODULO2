@@ -1,18 +1,46 @@
 $(document).ready(function () {
-    const botonesReserva = $('.btn-reserva'); // Selecciona todos los botones btn-reserva
+  // SE HACE CLICK EN EL BOTÓN RESERVA Y AUTOMATICAMENTE SALE EL NOMBRE DE LA PELICULA QUE SE ESTÁ DESEANDO RESERVAR
+  $('.btn-reserva').click(function () {
+    const titulo = $(this).closest('.card').find('.card-title').text();
+    $('#pelicula').val(titulo);
+  });
 
-    // Cuando se hace clic en btn-reserva
-    botonesReserva.click(function () {
-        const titulo = $(this).closest('.card').find('.card-title').text(); //Obtiene el card-title de la card mas cercana al botón
-        $('#pelicula').val(titulo); //Asigna el titulo al value del input pelicula
-    });
+  // VALIDACIÓN + MENSAJE DE LA RESERVA
+  $('#formReserva').submit(function (e) {
+    e.preventDefault(); // Evita el envío real
 
-    $('#formReserva').submit(function(){
-        let mensaje = 'Reserva exitosa\nEl resumen de su compra:\n';
-        mensaje+='Pelicula: '+$(this).find('#pelicula').val()+'\n';
-        mensaje+='Horario: '+$(this).find('#horario').val()+'\n';
-        mensaje+='Cantidad de asientos: '+$(this).find('#asientos').val()+'\n';
-        mensaje+='¡Gracias por su compra!';
-        alert(mensaje);
-    });
+    const tarjeta = $('#tarjeta').val().trim();
+    const cvv = $('#cvv').val().trim();
+
+    // VALIDACIÓN DE TARJETA , QUE TENGA 16 DIGITOS
+    if (!/^\d{16}$/.test(tarjeta)) {
+      alert("El número de tarjeta debe tener exactamente 16 dígitos.");
+      return;
+    }
+
+    // VALIDAR QUE EL CODIGO CVV TENGA 3 DIGITOS
+    if (!/^\d{3}$/.test(cvv)) {
+      alert("El CVV debe tener exactamente 3 dígitos.");
+      return;
+    }
+
+    const ultimos4 = tarjeta.slice(-4);
+
+    // USO DE ICONOS FONT AWESOME - PARA VALIDACIÓN DEL MENSAJE DE COMPRA
+    const mensajeHTML = `
+      <h5><i class="fa-solid fa-circle-check text-success"></i> Reserva exitosa</h5>
+      <p><i class="fa-solid fa-clapperboard"></i> <strong>Película:</strong> ${$('#pelicula').val()}</p>
+      <p><i class="fa-solid fa-clock"></i> <strong>Horario:</strong> ${$('#horario').val()}</p>
+      <p><i class="fa-solid fa-chair"></i> <strong>Asientos:</strong> ${$('#asientos').val()}</p>
+      <p><i class="fa-solid fa-credit-card"></i> <strong>Tarjeta:</strong> **** **** **** ${ultimos4}</p>
+      <p>¡Gracias por su compra!</p>
+    `;
+
+    // MENSAJE DE COMPRA
+    $('#mensajeExito').html(mensajeHTML).removeClass('d-none');
+
+    // LIMPIA FORMULARIO
+    this.reset();
+    $('#modalReserva').modal('hide');
+  });
 });
