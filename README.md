@@ -43,7 +43,7 @@
 - git add README.md
 - git commit -m "first commit"
 - git branch -M main
-- git remote add origin git@github.com:LauDuhalde/java0078_modulo2.git
+- git remote add origin git@github.com:LauDuhalde/JAVA0078_MODULO2.git
 - git push -u origin main
 
 - git pull
