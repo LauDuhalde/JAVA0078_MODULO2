@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE6_ABP-Ejercicio individual - LDuhalde</title>
+
+    <!-- Bootstrap CSS: Estilos del framework Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS de proyecto -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main>
+        <!-- ===================== GALERÍA ===================== -->
+        <div class="container mt-4">
+            <h1>Galería</h1>
+            <div class="row">
+                <!-- 
+                    Cada imagen está en una columna. 
+                    data-bs-toggle="modal" abre el modal,
+                    data-bs-target="#galeriaModal" indica qué modal abrir,
+                    data-index indica el índice de la imagen para navegar entre ellas. 
+                -->
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img1.webp" alt="img1" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="0">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img2.webp" alt="img2" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="1">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img3.webp" alt="img3" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="2">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img4.webp" alt="img4" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="3">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img5.webp" alt="img5" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="4">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img6.webp" alt="img6" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="5">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img7.webp" alt="img7" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="6">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img8.webp" alt="img8" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="7">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img9.webp" alt="img9" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="8">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img10.webp" alt="img10" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="9">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img11.webp" alt="img11" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="10">
+                </div>
+                <div class="col-6 col-md-2">
+                    <img src="assets/img/img12.webp" alt="img12" class="img-thumbnail miniatura" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-index="11">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== MODAL ===================== -->
+        <!-- Modal de Bootstrap para ver la imagen en grande 
+            .modal: estructura básica del modal de Bootstrap
+            .fade: aplica un efecto de desvanecimiento al mostrar/ocultar
+            tabindex="-1": permite cerrar el modal con "Esc"
+            aria-hidden="true": oculta el modal para lectores de pantalla mientras está cerrado 
+        -->
+        <div class="modal fade" id="galeriaModal" tabindex="-1" aria-hidden="true">
+            <!-- 
+                .modal-dialog: define el área del cuadro del modal
+                .modal-dialog-centered: centra verticalmente el modal en la pantalla
+            -->
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-white text-center">
+                    <!--
+                        .modal-body: contenido principal del modal, sin encabezado ni pie
+                        .position-relative: permite posicionar botones dentro del contenedor 
+                    -->
+                    <div class="modal-body position-relative">
+                        <!-- Imagen grande que se actualizará con jQuery -->
+                        <img id="modalImg" src="assets/img/img1.webp" alt="img grande" class="img-fluid">
+
+                        <!-- Botón para cerrar el modal -->
+                        <!-- data-bs-dismiss="modal": cierra el modal al hacer clic -->
+                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"></button>
+
+                        <!-- Botón para ver la imagen anterior -->
+                        <button id="prevBtn" class="btn btn-light position-absolute start-0 top-50 translate-middle-y ms-2">⟨</button>
+
+                        <!-- Botón para ver la imagen siguiente -->
+                        <button id="nextBtn" class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2">⟩</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- jQuery: Biblioteca para facilitar el uso de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS: funcionalidades de modales, botones, etc. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de proyecto -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

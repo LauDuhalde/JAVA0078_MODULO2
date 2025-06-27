@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibroLibre</title>
+    <!-- Normalize para resetear estilos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- ======================== Navbar ======================== -->
+        <nav>
+            <h1>LibroLibre</h1>
+            <div>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#registro">Registro</a>
+                <a href="#nosotros">Sobre Nosotros</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- ======================== Catalogo ======================== -->
+        <section id="catalogo">
+            <h1>Catálogo de Libros</h1> 
+            <input id="txt_buscar" type="text" placeholder="Buscar por título, autor o género">
+            <br>
+            <button id="btn_buscar" type="button">Buscar</button>
+            <div class="w-50">
+                <div class="div-border libro">
+                    <h3>El Principito</h3>
+                    <p class="autor"><strong>Autor: </strong>Antoine de Saint-Exupéry</p>
+                    <p class="genero"><strong>Género: </strong>Ficción</p>
+                    <p>Una historia poética sobre un pequeño príncipe y sus viajes.</p>
+                </div>
+                <div class="div-border libro">
+                    <h3>Clean Code</h3>
+                    <p class="autor"><strong>Autor: </strong>Robert C. Martin</p>
+                    <p class="genero"><strong>Género: </strong>Programación</p>
+                    <p>Una guía para escribir código limpio y mantenible.</p>
+                </div>
+                <div class="div-border libro">
+                    <h3>Cien Años de Soledad</h3>
+                    <p class="autor"><strong>Autor: </strong>Gabriel García Márquez</p>
+                    <p class="genero"><strong>Género: </strong>Realismo mágico</p>
+                    <p>Una saga familiar ambientada en el mítico pueblo de Macondo.</p>
+                </div>
+                <div class="div-border libro">
+                    <h3>Juego de tronos, Canción de hielo y fuego 1</h3>
+                    <p class="autor"><strong>Autor: </strong>George R. R. Martin</p>
+                    <p class="genero"><strong>Género: </strong>Fantasía</p>
+                    <p>En un mundo donde nobles luchan por el poder y el invierno se acerca, intrigas, traiciones y destinos se entrelazan en los Siete Reinos de Poniente.</p>
+                </div>
+            </div>
+        </section>
+        <!-- ======================== Registro ======================== -->
+        <section id="registro">
+            <h2>Registro de usuarios</h2>
+            <form id="formulario-registro">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <br>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <br>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <br>
+                <button type="submit" id="btn_registro">Registrarse</button>
+            </form>
+        </section>
+        <!-- ======================== Sobre Nosotros ======================== -->
+        <section id="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>LibroLibre es una biblioteca digital creada por tres entusiastas de la lectura con el objetivo de facilitar el acceso a libros electrónicos y audiolibros de manera simple y eficiente.</p>
+        </section>
+    </main>
+    <!-- ======================== Footer ======================== -->
+    <footer>
+        <p>&copy; 2025 LibroLibre. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- script de proyecto-->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

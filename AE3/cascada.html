@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada y herencia</title>
+    <style>
+        #padre {
+            background-color: lightblue;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #hijo {
+            background-color: lightgreen;
+            margin: 20px;
+        }
+        h2 {
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="padre">
+        <!--Los elementos heredan el estilo de div a menos que se indique lo contrario-->
+        <h2>Herencia de estilos</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, excepturi eius? Iure explicabo, quibusdam qui, asperiores assumenda dolor id minima error nemo quo, porro impedit cum recusandae fugit odit delectus!
+        </p>
+        <div id="hijo">
+            <div>
+                <h3>Estilo de div anidado</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

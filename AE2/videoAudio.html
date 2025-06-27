@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video y audio</title>
+</head>
+<body>
+    <video src="assets/video/big-buck-bunny-1080p-30sec.mp4" autoplay loop muted width="560" height="315"></video>
+    <!-- video con autoplay, loop y muted -->
+    <br>
+    <video width="560" height="315" controls autoplay muted>
+        <!-- video con controles, autoplay y muted -->
+        <!-- width y height especifican el tamaño del video -->
+        <source src="assets/video/video.mp4" type="video/mp4">
+        <!-- <source src="assets/video/video.webm" type="video/webm"> -->
+        <!-- <source src="assets/video/video.ogg" type="video/ogg"> -->
+        Tu navegador no soporta el elemento de video.
+        <!-- mensaje alternativo si el navegador no soporta el video -->
+        <!-- mas de un source permite que el navegador reproduzca el video con el que sea compatible, 
+        según chatgpt esta es una buena práctica-->
+        <!-- Tip: Siempre usa muted si usas autoplay, ya que la mayoría de los navegadores 
+        no reproducen automáticamente videos con sonido por razones de experiencia de usuario.-->
+    </video>
+    <!-- source especifica la fuente del video, type indica el formato -->
+    <br>
+    <!-- Audio -->
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="assets/audio/click.mp3" type="audio/mp3">
+        <!-- source para el audio, type indica el formato -->
+        Tu navegador no soporta el elemento de audio.
+        <!-- mensaje alternativo si el navegador no soporta el audio -->
+    </audio>
+
+    <h2>Video de YouTube</h2>
+    <!-- iframe es un marco que permite incrustar contenido externo -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fOd16PT1S7A" allowfullscreen></iframe>
+    <!-- iframe para incrustar un video de YouTube, allowfullscreen permite pantalla completa -->
+    <br>
+    <!-- Página web inscrustada -->
+    <iframe width="900" height="900" src="https://rainbowclub-page.netlify.app/"></iframe>
+    <!-- iframe con un sitio web externo, frameborder="0" elimina el borde del marco, pero está obsoleto -->
+    <br>
+</body>
+</html>

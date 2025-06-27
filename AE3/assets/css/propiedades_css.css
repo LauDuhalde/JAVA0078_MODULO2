@@ -1,0 +1,26 @@
+/* Comentarios en español */
+div {
+    width: 80%; /* Ancho del div en relación al contenedor */
+    height: 200px; /* Alto del div */
+    background-color: lightgray; /* Color de fondo del div */
+    font-size: xx-large; /* Tamaño de fuente del div */
+    overflow: auto; /* Permite el desplazamiento si el contenido es mayor que el div */
+    border: #ca92a9 solid 4px; /* Borde del div, color rosado con 4px de grosor */
+    border-radius: 10px; /* Bordes redondeados del div */
+    padding: 10px; /* Espacio interno del div */
+}
+p {
+    font-size: 16px; /* Tamaño de fuente del párrafo en pixeles*/
+}
+p {
+    font-size: 2em; /* Tamaño de fuente del párrafo en em, 1 em = 16px, es relativo al tamaño de la fuente del contenedor */
+    background: #ca92a9 url(../img/cerezos.jpg) no-repeat center; /* Fondo rosado con imagen de cerezos, centrada y sin repetición */
+}
+a {
+    font-size: 1rem; /* Tamaño de fuente del enlace, es relativo al tamaño de la fuente del elemento raíz */
+}
+a{
+    font-size: 80%; /* Tamaño de fuente del enlace, relativo al tamaño de la fuente del elemento contenedor */
+    border: #ca92a9 dotted 2px; /* Borde del enlace, color rosado con 2px de grosor */
+    border-radius: 5px; /* Bordes redondeados del enlace */
+}

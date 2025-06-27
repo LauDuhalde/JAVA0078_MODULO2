@@ -1,0 +1,43 @@
+/* comentarios en español */
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; /* Subrayado del texto */
+    font-style: italic; /* Cursiva */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrado */
+    text-shadow: 2px 2px 4px lightgray; /* Sombra del texto 2px horizontal, 2px vertical, 4px blur, color lightgray */
+    text-decoration-color: aqua;
+}
+form {
+    margin: 20px; /* Espacio alrededor del formulario */
+    padding: 20px; /* Espacio interno del formulario */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9;
+}
+.bg1 {
+    background-color: #f0f8ff; /* Fondo azul claro */
+    padding: 20px; /* Espacio interno del fondo */
+}
+
+.bg2 {
+    background-color: #f5f5dc; /* Fondo beige */
+    padding: 20px; /* Espacio interno del fondo */
+}
+input[type="text"]{
+    background-color: red;
+}
+input[type="password"] {
+    background-color: lightblue;
+}
+*[type="submit"] { /* Selecciona todos los elementos de tipo submit */
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero al pasar por encima */
+}

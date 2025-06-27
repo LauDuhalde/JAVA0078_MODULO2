@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlash - Grupo 5</title>
+    <!-- Enlace a Bootstrap 5.3.7 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/3432f07c5e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="container text-center my-5">
+        <h1><i class="fa-solid fa-clapperboard"></i>Bienvenidos a CineFlash</h1>
+    </header>
+    <main class="container">
+        <!-- ===================== PELICULAS ===================== -->
+        <div class="row justify-content-center text-center">
+            <div class="col-md-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/dune2.jpg" class="card-img-top" alt="Dune 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Dune parte 2</h5>
+                        <a href="#" class="btn btn-primary btn-reserva" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/barbie.jpg" class="card-img-top" alt="Barbie">
+                    <div class="card-body">
+                        <h5 class="card-title">Barbie</h5>
+                        <a href="#" class="btn btn-primary btn-reserva" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/oppenheimer.webp" class="card-img-top" alt="Oppenheimer">
+                    <div class="card-body">
+                        <h5 class="card-title">Oppenheimer</h5>
+                        <a href="#" class="btn btn-primary btn-reserva" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/elio.jpeg" class="card-img-top" alt="Elio">
+                    <div class="card-body">
+                        <h5 class="card-title">Elio</h5>
+                        <a href="#" class="btn btn-primary btn-reserva" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== MODAL RESERVA ===================== -->
+        <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <form id="formReserva">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="modalReservaLabel">Formulario de Reserva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    <!-- Título de la película -->
+                    <div class="mb-3">
+                        <label for="pelicula" class="form-label">Película</label>
+                        <input type="text" class="form-control" id="pelicula" name="pelicula" readonly>
+                    </div>
+
+                    <!-- Selección de horario -->
+                    <div class="mb-3">
+                        <label for="horario" class="form-label">Horario</label>
+                        <select class="form-select" id="horario" name="horario" required>
+                        <option value="" selected disabled>Seleccione un horario</option>
+                        <option>12:00</option>
+                        <option>15:00</option>
+                        <option>18:00</option>
+                        <option>21:00</option>
+                        </select>
+                    </div>
+
+                    <!-- Cantidad de asientos -->
+                    <div class="mb-3">
+                        <label for="asientos" class="form-label">Cantidad de asientos</label>
+                        <input type="number" class="form-control" id="asientos" name="asientos" min="1" max="10" required>
+                    </div>
+
+                    <!-- Sección de pago -->
+                    <h6>Pago (simulado)</h6>
+                    <div class="mb-3">
+                        <label for="tarjeta" class="form-label">Número de tarjeta</label>
+                        <input type="number" class="form-control" id="tarjeta" name="tarjeta" maxlength="16" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="titular" class="form-label">Nombre del titular</label>
+                        <input type="text" class="form-control" id="titular" name="titular" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="number" class="form-control" id="cvv" name="cvv" maxlength="3" required>
+                    </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Confirmar btn-reserva</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <!-- ======================== Footer ======================== -->
+    <footer>
+        <p>&copy; 2025 CineFlash. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- CDN JQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Script JS-->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

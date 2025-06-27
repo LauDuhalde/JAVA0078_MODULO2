@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE3_ABP-Ejercicio individual - LDuhalde</title>
+    <!-- Normalize para resetear estilos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome para añadir iconos-->
+    <script src="https://kit.fontawesome.com/3432f07c5e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <nav>
+            <div>
+                <h1>Perfil</h1>
+            </div>
+            <div>
+                <a href="#">Inicio</a>
+                <a href="#mi-perfil">Mi Perfil</a>
+                <a href="#encontrar-conexiones">Encontrar Conexiones</a>
+                <button class="bg-especial">Cerrar sesión</button>
+            </div>
+            
+        </nav>
+    </header>
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main>
+        <!-- ===================== MI PERFIL ===================== -->
+        <section id="mi-perfil">
+            <div class="div-border padding-b20">
+                <div class="bg-especial banner"></div>
+                <!-- Imagen de perfil sacada de https://randomuser.me/ -->
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Linn Olsen" class="perfil-img">
+                <h2 class="padding-l20 padding-b20">Linn Olsen</h2>
+                <p class="padding-l20 padding-b20">
+                    Bergen, Noruega<br>
+                    Diseñadora de UX/UI | Desarrolladora Frontend | Amante de la naturaleza
+                </p>
+                <p class="padding-l20 padding-b20">
+                    Apasionada por crear experiencias digitales hermosas y funcionales. Cuando no está coddificando, disfruta explorando los fiordos noruegos y capturando la belleza de la naturaleza en fotografías.
+                </p>
+                <a href="#" class="padding-l20"><i class="fa-solid fa-gear"></i> Edit profile</a>
+            </div>
+            <div class="div-border padding-20">
+                <h3 class="padding-b20">Education</h3>
+                <p>Coding Dojo - Bootcamp de Desarrollo Full Stack<br>
+                Dic 2019 - Mar 2020<br>
+                Triple cinturón negro en Python, MERN y C#</p>
+            </div>
+        </section>
+        <!-- ===================== ENCONTRAR CONEXIONES ===================== -->
+        <!-- Imagenes de usuario sacada de https://randomuser.me/ -->
+        <section id="encontrar-conexiones">
+            <div class="div-border padding-20">
+                <h3 class="padding-b20">Solicitudes de Conexión (2)</h3>
+                <div class="solicitudes">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kai Schröder">
+                    <span>Kai Schröder</span>
+                    <button class="aceptar-rechazar"><i class="fa-regular fa-circle-check"></i></button>
+                    <button class="aceptar-rechazar"><i class="fa-regular fa-circle-xmark"></i></button>
+                </div>
+                <div class="solicitudes">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amira El-Masry">
+                    <span>Amira El-Masry</span>
+                    <button class="aceptar-rechazar"><i class="fa-regular fa-circle-check"></i></button>
+                    <button class="aceptar-rechazar"><i class="fa-regular fa-circle-xmark"></i></button>
+                </div>
+            </div>
+            <div class="div-border padding-20">
+                <h3 class="padding-b20">Tus Conexiones (500+)</h3>
+                <div class="conexiones">
+                    <ul>
+                        <li><img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Adrien Desplatz"> Adrien Desplatz</li>
+                        <li><img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Aarav Patel"> Aarav Patel</li>
+                        <li><img src="https://randomuser.me/api/portraits/women/49.jpg" alt="Lina Kovačević"> Lina Kovačević</li>
+                        <li><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Mateo Hernández"> Mateo Hernández</li>
+                        <li><img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Yuna Kim"> Yuna Kim</li>
+                        <li><img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Liam O'Brien"> Liam O'Brien</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <i class="fa-regular fa-copyright"></i> 2025 - LDuhalde
+    </footer>
+</body>
+</html>

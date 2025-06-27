@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <!-- Formulario de ejemplo -->
+    <!-- action="#" indica que el formulario no se enviará a ningún lado -->
+    <!-- method="get" indica que los datos se enviarán como parámetros de la URL -->
+    <!-- method="post" indica que los datos se enviarán en el cuerpo de la solicitud -->
+    <form action="#" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" > <!-- placeholder -->
+        <br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido" name="apellido" >
+        <br>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad">
+        <br>
+        <label for="clave">Password: </label>
+        <input type="password" name="clave" id="clave">
+        <br>
+        <label for="fecha_nac">Fecha de nacimiento: </label>
+        <input type="date" name="fecha_nac" id="fecha_nac">
+        <br>
+        <!-- Radio button-->
+        <label>Días de semana: </label>
+        <input type="radio" name="dias" id="lunes" value="lunes" checked>
+        <label for="lunes">Lunes</label>
+        <input type="radio" name="dias" id="martes" value="martes">
+        <label for="martes">Martes</label>  
+        <input type="radio" name="dias" id="miercoles" value="miercoles">
+        <label for="miercoles">Miércoles</label>
+        <input type="radio" name="dias" id="jueves" value="jueves">
+        <label for="jueves">Jueves</label>
+        <input type="radio" name="dias" id="viernes" value="viernes">
+        <label for="viernes">Viernes</label>
+        <br>
+        <!-- Checkbox -->
+        <input type="checkbox" id="acepto" name="acepto" >
+        <label for="acepto">Acepto los términos y condiciones</label>
+        <br>
+        <!-- Textarea -->
+        <label for="comentarios">Comentarios: </label>
+        <br>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Escribe tus comentarios aquí..."></textarea>
+        <br>
+        <!-- Select -->
+        <label for="skill">Seleccione una tecnología: </label>
+        <br>
+        <!-- Select con opciones -->
+        <!-- El atributo multiple permite seleccionar varias opciones -->
+        <!-- El atributo size define cuántas opciones se muestran a la vez -->
+        <!-- El atributo required indica que el campo es obligatorio -->
+        <select name="skill" id="skill">
+            <!-- La primera opción es un "placeholder" -->
+            <!-- disabled evita que se pueda seleccionar -->
+            <!-- selected indica que esta opción es la predeterminada -->
+            <option value="" disabled selected>Seleccione una opción</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select>
+        <br>
+        <!-- Botones de envío -->
+        <!-- El tipo default de un button es submit -->
+        <!-- Es una buena práctica utilizar button en vez de input -->
+        <button type="submit">Enviar</button> <button>Enviar 2</button> <input type="submit" value="Enviar 3">
+        <br>
+        <!-- Botón de reinicio de formulario -->
+        <button type="reset">Reiniciar</button>
+        <br>
+        <!-- Botones que no envían el formulario -->
+        <input type="button" value="Acción input" onclick="alert('Input button de acción')">
+        <br>
+        <button type="button" onclick="alert('Botón de acción')">Acción botón</button>
+        <br>
+        <button type="submit" formaction="https://www.instagram.com">Enviar a otro sitio</button>
+    </form>
+</body>
+</html>

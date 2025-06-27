@@ -1,0 +1,18 @@
+/*comentarios en español*/
+.container {
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row; /* Dirección de los hijos en fila */
+    justify-content: center; /* Centra los hijos horizontalmente */
+    align-items: center; /* Centra los hijos verticalmente */
+}
+.div-hijos {
+    background-color: lightgreen;
+    width: 50px;
+    height: 50px;
+}
+#div2 {
+    align-self: flex-end; /* Alinea este hijo al final del eje cruzado */
+}

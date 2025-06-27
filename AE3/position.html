@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .container {
+            background-color: lightblue;
+            width: 400px;
+            height: 400px;
+            /*display: flex; /*puede reeemplazarse por inline-block en cada box*/
+            padding: 1em;
+        }
+        #box1, #box2, #box3 {
+            width: 40px;
+            height: 40px;
+            display: inline-block; /* Permite que los elementos se alineen horizontalmente */
+        }
+        #box1{
+            background-color: lightcoral;
+            /*position: absolute; /* Permite el uso de top, left, etc. Queda por sobre el otro div*/
+            position: relative; /* Permite el uso de top, left, etc. pero queda dentro del flujo del documento, los otros elementos no se ven afectados */
+            top: 40px; /* Posición desde el borde superior del contenedor */
+        }
+        #box2{
+            background-color: lightgreen;
+            position: fixed; /* Permite el uso de top, left, etc. pero queda fijo en la ventana del navegador */
+            top: 10px;
+        }
+        #box3{
+            background-color: lightgoldenrodyellow;
+             /*position: fixed; /* Permite el uso de top, left, etc. pero queda fijo en la ventana del navegador */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+</html>

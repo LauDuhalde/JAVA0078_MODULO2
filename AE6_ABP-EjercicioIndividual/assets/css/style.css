@@ -1,0 +1,4 @@
+.miniatura:hover {
+    transform: scale(1.05); /* Agranda la imagen al pasar el mouse */
+    border-color: #666; /* Cambia el color del borde a gris más oscuro */
+}

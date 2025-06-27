@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div</title>
+</head>
+<body>
+    <!-- Un div es un contenedor genérico que se utiliza para agrupar contenido y aplicar estilos -->
+    <!-- Es un elemento de bloque -->
+    <div style="background-color: lightblue; padding: 20px; margin: 10px;">
+        <h2>Div con fondo azul</h2>
+        <p>Este es un div con un fondo azul claro, padding de 20px y margin de 10px.</p>
+    </div>
+    <!-- El formulario dentro de un div permite agrupar campos relacionados -->
+    <form action="#" method="post">
+        <h2>Formulario dentro de un div</h2>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+        </div>
+        <div>
+            <label>Días de semana: </label>
+            <input type="radio" name="dias" id="lunes" value="lunes" checked>
+            <label for="lunes">Lunes</label>
+            <input type="radio" name="dias" id="martes" value="martes">
+            <label for="martes">Martes</label>  
+            <input type="radio" name="dias" id="miercoles" value="miercoles">
+            <label for="miercoles">Miércoles</label>
+            <input type="radio" name="dias" id="jueves" value="jueves">
+            <label for="jueves">Jueves</label>
+            <input type="radio" name="dias" id="viernes" value="viernes">
+            <label for="viernes">Viernes</label>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

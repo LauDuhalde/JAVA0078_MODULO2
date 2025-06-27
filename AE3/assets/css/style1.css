@@ -1,0 +1,43 @@
+* { /* Selector universal, afecta a todos los elementos */
+    margin: 0px;
+    padding: 0px;
+   /* outline: 1px solid red; /* Añade un borde de contorno a todos los elementos */
+}
+
+h1 { /*Etiqueta*/
+    color: blue;
+    font-size: 50px;
+}
+.div1 { /*Clase*/
+    background-color: lightblue;
+}
+.div2 { /*Clase*/
+    padding: 20px;
+}
+#p1 { /*ID*/
+    color: red;
+    font-size: 20px;
+    background-color: yellow;
+}
+
+p {
+    font-size: large !important; /* Esta regla tendrá prioridad sobre las demás por tener !important*/
+}
+
+#div2 { /*ID*/
+    background-color: pink;
+}
+#div2 > p { /*Selector hijo (descendente directo), afecta solo al elemento hijo directo, no anidados*/
+    color: yellow;
+    font-weight: bold;
+    font-size: 18px;
+}
+#div2 p { /*Selector descendente, afecta a todos los elementos anidados*/
+    background-color: lightgreen;
+    font-size: 16px;
+}
+
+input[type="text"] { /* Selector de atributo, afecta a elementos con un atributo específico */
+    border: 2px solid green;
+    padding: 5px;
+}

@@ -1,0 +1,68 @@
+/* ===================== RESET Y CONFIGURACIÓN BASE ===================== */
+* {
+    box-sizing: border-box; /* Usa el modelo de caja que incluye el padding y border en el tamaño total */
+    margin: 0;              /* Elimina márgenes por defecto */
+    padding: 0;             /* Elimina rellenos por defecto */
+    font-family: 'Roboto', sans-serif; /* Fuente predeterminada */
+}
+
+/* ===================== CLASES UTILITARIAS ===================== */
+.div-border {
+    border: 1px solid rgba(128, 128, 128, 0.389);
+    border-radius: 10px;
+    margin: 10px; /* Margen reducido para pantallas pequeñas */
+    padding: 20px;
+}
+
+/* ===================== ENCABEZADO (NAV) - DISEÑO MOBILE FIRST ===================== */
+nav {
+    background-color: #333333; /* Fondo oscuro para nav */
+    display: flex;
+    flex-direction: column; /* En pantallas pequeñas, los elementos van en columna */
+    align-items: flex-start; /* Alinea contenido al inicio */
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* Elimina subrayado */
+    margin-right: 10px; /* Margen lateral reducido para móvil */
+}
+
+/* ===================== MAIN ===================== */
+main {
+    display: flex;
+    flex-direction: column; /* En móvil, secciones apiladas */
+    gap: 20px; /* Espacio entre secciones */
+    margin: 20px;
+}
+
+input, button {
+    width: 100%;
+    margin: 5px;
+}
+
+footer {
+    margin: 20px;
+}
+
+/* ===================== MEDIA QUERY PARA PANTALLAS GRANDES (>= 768px) O MODO HORIZONTAL ===================== */
+@media (min-width: 768px), (orientation: landscape) {
+
+    /* NAV en escritorio */
+    nav {
+        flex-direction: row; /* Elementos alineados en fila */
+        justify-content: space-between; /* Distribución con espacio entre elementos */
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0 15px; /* Mayor separación entre elementos en escritorio */
+    }
+
+    .w-50 {
+    width: 50%; /* Ocupa 50% del espacio disponible */
+    }
+}
